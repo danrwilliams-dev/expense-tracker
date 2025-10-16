@@ -33,7 +33,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
+    
+    public function expenses(){
+        return $this->hasMany(Expense::class, 'user_id', 'id');
+    }
     /**
      * Get the attributes that should be cast.
      *
