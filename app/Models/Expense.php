@@ -20,12 +20,16 @@ class Expense extends Model
         'amount_in_pence',
         'date',
     ];
+    
     // Optionally cast certain columns to specific types
     protected $casts = [
         'date' => 'date',
     ];
+    
+    // relationships
     public function user() {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->
+        belongsTo(User::class, 'user_id', 'id');
     }
 
 }
